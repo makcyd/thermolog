@@ -10,8 +10,14 @@ class ThermometerAdmin(admin.ModelAdmin):
 
 @admin.register(ThermoRecord)
 class ThermoRecordAdmin(admin.ModelAdmin):
-    readonly_fields = []
-    list_display = ["created_at", "thermometer", "air_tem", "floor_tem", "sync_status", "connected"]
+    readonly_fields = ["get_air_tem", "get_floor_tem"]
+    list_display = ["created_at", "thermometer", "get_air_tem", "get_floor_tem", "sync_status", "connected"]
+
+    def get_air_tem(self, obj):
+        return "{:.1f} °C".format(obj.air_tem/10)
+
+    def get_floor_tem(self, obj):
+        return "{:.1f} °C".format(obj.floor_tem/10)
 
     def get_readonly_fields(self, request, obj=None):
         return list(self.readonly_fields) + \

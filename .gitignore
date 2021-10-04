@@ -276,3 +276,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 local_settings.py
+
+logs/*.log
