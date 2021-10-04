@@ -8,7 +8,7 @@ setuptools.setup(
     description="Thermolog - Small app to log temperature at my country house",
     url="https://github.com/makcyd/thermolog",
     packages=["thermolog"],
-    install_requires=["weback-unofficial", "requests", "Django"],
+    install_requires=["weback-unofficial", "requests", "Django", "boto3"],
     python_requires=">=3.7",
     classifiers=[
         "Programming Language :: Python :: 3",
