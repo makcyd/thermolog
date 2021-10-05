@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="thermolog",
-    version="0.0.1",
+    version="0.0.2",
     author="Max Sudyin",
     author_email="msudyin@gmail.com",
     description="Thermolog - Small app to log temperature at my country house",
