@@ -276,5 +276,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 local_settings.py
-
+static/*
 logs/*.log
